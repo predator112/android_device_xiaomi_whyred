@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common AICP stuff
 $(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
+#Inherit MiuiCamera
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 # Inherit from whyred device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
